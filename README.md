@@ -1,7 +1,6 @@
 # WaveGC
 This is the official implement of 'Advancing Graph Convolutional Networks via General Spectral Wavelets'.
 This code is based on [GraphGPS](https://github.com/rampasek/GraphGPS).
-![image](https://github.com/liun-online/WaveGC/blob/main/WaveGC_model.png)
 
 ## Python environment setup with Conda
 ```
@@ -67,8 +66,3 @@ Here, 'model' $\in$ {gps, san, trans}, 'data' $\in$ {actor, mine, tolo}. E.g.,
 ```
 CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/gps+WaveGC_actor.yaml --repeat 10 wandb.use False
 ```
-
-## Download PCQM dataset
-cd WaveGC_graph/datasets/
-
-gdown https://drive.google.com/u/0/uc?id=1AsDG-9WZ5b11lzHl8Ns4Qb0HxlcUOlQq && unzip pcqm4m-v2-contact.zip
