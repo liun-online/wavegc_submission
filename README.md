@@ -29,29 +29,25 @@ pip install gdown
 ### a. run WaveGC on long-range datasets
 Go into 'WaveGC_graph' folder, then run the following command:
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/{model}+WaveGC_{data}.yaml --repeat 4 wandb.use False
+CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/WaveGC_{data}.yaml --repeat 4 wandb.use False
 ```
-Here, 'model' $\in$ {gps, san, trans}, 'data' $\in$ {voc, pcqm, coco, pf, ps}. E.g.,
+Here, 'data' $\in$ {voc, pcqm, coco, pf, ps}. E.g.,
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/gps+WaveGC_voc.yaml --repeat 4 wandb.use False
+CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/WaveGC_voc.yaml --repeat 4 wandb.use False
 ```
 
 ### b. run WaveGC on short-range datasets
 Go into 'WaveGC_node' folder, then run the following command:
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/{model}+WaveGC_{data}.yaml --repeat 10 wandb.use False
+CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/WaveGC_{data}.yaml --repeat 10 wandb.use False
 ```
-Here, 'model' $\in$ {gps, san, trans}, 'data' $\in$ {computer, corafull, cs, photo}. E.g.,
+Here, 'data' $\in$ {computer, corafull, cs, photo}. E.g.,
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/gps+WaveGC_computer.yaml --repeat 10 wandb.use False
+CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/WaveGC_computer.yaml --repeat 10 wandb.use False
 ```
 
 ### c. run WaveGC on ogbn-arxiv
 Go into 'WaveGC_arxiv' folder, then run the following command:
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/{model}+WaveGC_arxiv.yaml --repeat 10 wandb.use False
-```
-Here, 'model' $\in$ {gps, san, trans}. E.g.,
-```
-CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/gps+WaveGC_arxiv.yaml --repeat 10 wandb.use False
+CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/WaveGC_arxiv.yaml --repeat 10 wandb.use False
 ```
