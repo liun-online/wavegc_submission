@@ -1,5 +1,4 @@
 # WaveGC
-This is the official implement of 'Advancing Graph Convolutional Networks via General Spectral Wavelets'.
 
 ## Python environment setup with Conda
 ```
@@ -55,13 +54,4 @@ CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/{model}+WaveGC_arxiv.
 Here, 'model' $\in$ {gps, san, trans}. E.g.,
 ```
 CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/gps+WaveGC_arxiv.yaml --repeat 10 wandb.use False
-```
-### d. run WaveGC on heterophily datasets
-Go into 'WaveGC_hete' folder, then run the following command:
-```
-CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/{model}+WaveGC_{data}.yaml --repeat 10 wandb.use False
-```
-Here, 'model' $\in$ {gps, san, trans}, 'data' $\in$ {actor, mine, tolo}. E.g.,
-```
-CUDA_VISIBLE_DEVICES=0 python main.py --cfg configs/WaveGC/gps+WaveGC_actor.yaml --repeat 10 wandb.use False
 ```
